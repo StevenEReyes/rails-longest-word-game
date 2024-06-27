@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="mt-2">
+    <h1>Result</h1>
+  </div>
+
+
+  <div>
+    <ul><%= @letters %></ul>
+    <ul>Your word: <%= @user_word %></ul>
+  </div>
+
+  <div class="mt-3 col-4">
+    <% if @word_valid and @english_check %>
+      <p>congrats, you wrote a word</p>
+      <% else %>
+      <p>Not a valid entry :(</p>
+    <% end %>
+  </div>
+  <%= link_to("Play Again?", root_path)  %>
+</div>
